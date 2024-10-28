@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Video Timestamp Search",
+    "version": "1.0",
+    "description": "Search video timestamps",
+    "content_scripts": [
+      {
+        "matches": ["*://*.bilibili.com/video/*"],
+        "css": ["content.css"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
+  

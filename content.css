@@ -1,0 +1,43 @@
+.timestamp-search-panel {
+    position: fixed;
+    right: 20px;
+    top: 100px;
+    width: 300px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    z-index: 9999;
+  }
+  
+  .timestamp-search-header {
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #18191c;
+  }
+  
+  .timestamp-search-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #e3e5e7;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  .timestamp-search-input:focus {
+    outline: none;
+    border-color: #00aeec;
+  }
+  
+  .timestamp-result-area {
+    min-height: 100px;
+    max-height: 300px;
+    overflow-y: auto;
+    color: #61666d;
+    font-size: 14px;
+  }
+  
