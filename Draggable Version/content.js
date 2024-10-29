@@ -1,26 +1,37 @@
 (function() {
-    // 创建搜索面板
     function createSearchPanel() {
         const panel = document.createElement('div');
         panel.className = 'timestamp-search-panel';
         panel.innerHTML = `
-            <div class="timestamp-search-header">时间戳搜索</div>
+            <div class="timestamp-search-header">
+                <img src="https://example.com/avatar.png" alt="Avatar">
+                <span class="timestamp-search-header-text">视频知识点导航</span>
+            </div>
             <input type="text" 
                    class="timestamp-search-input" 
-                   placeholder="搜索视频内容..."
+                   placeholder="搜索关键词..."
             >
             <div class="timestamp-result-area">
-                搜索结果将显示在这里...
+                <div class="timestamp-item">
+                    <span class="timestamp-item-time">00:00</span>
+                    <span>Mac mini 选择与初始化设置</span>
+                </div>
+                <div class="timestamp-item">
+                    <span class="timestamp-item-time">00:20</span>
+                    <span>介绍苹果 Mac mini 可作家用服务器</span>
+                </div>
+                <!-- 添加更多时间戳项目 -->
+            </div>
+            <div class="timestamp-actions">
+                <button class="timestamp-action-button">亮点</button>
+                <button class="timestamp-action-button">视频选集</button>
             </div>
         `;
 
         document.body.appendChild(panel);
-        
-        // 使面板可拖动
         makeDraggable(panel);
     }
 
-    // 使元素可拖动
     function makeDraggable(element) {
         let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
         element.querySelector('.timestamp-search-header').style.cursor = 'move';
@@ -52,12 +63,13 @@
         }
     }
 
-    // 等待页面加载完成后初始化
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', createSearchPanel);
     } else {
         createSearchPanel();
     }
 })();
+
+
 
 
